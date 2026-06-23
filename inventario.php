@@ -18,9 +18,6 @@ ORDER BY p.id ASC";
 
 // 4. Ejecutar la consulta con MySQLi Orientado a Objetos
 
-Instituto Nacional de Ciudad Barrios
-Bachillerato en Desarrollo de Software - Allan Romero
-
 $resultado = $conn->query($sql);
 ?>
 
@@ -54,6 +51,8 @@ tr:hover { background-color: #f8fafc; }
 <div class="header">
 
 <h2>Catálogo de Inventario</h2>
+<a href="nuevo_producto.php" style="background: #3b82f6; color: white; padding: 10px;
+text-decoration: none; border-radius: 5px;">+ Nuevo Producto</a>
 <div>
 <span>Usuario: <strong><?php echo $_SESSION['nombre']; ?></strong></span>
 <a href="logout.php" class="btn-salir">Cerrar Sesión</a>
@@ -109,4 +108,4 @@ $resultado->free();
 ?>
 
 </body>
-</html>
+</html> 
