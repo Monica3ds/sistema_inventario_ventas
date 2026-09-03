@@ -47,6 +47,8 @@ background-color: #ef4444; color: white; padding: 6px 12px;
 text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: bold;
 }
 .btn-eliminar:hover { background-color: #b91c1c; }
+{ background-color: #f59e0b; color: white; padding: 6px
+12px; text-decoration: none; border-radius: 4px; font-weight: bold; margin-right: 5px;
 </style>
 </head>
 <body>
@@ -97,6 +99,15 @@ onclick="return confirm('¿Estás absolutamente seguro de eliminar el producto: 
 echo $fila['nombre_producto']; ?>?');">
 🗑️ Eliminar
 </a>
+</td>
+<td>
+<!-- NUEVO BOTÓN DE EDITAR -->
+<a href="editar_producto.php?id=<?php echo $fila['id']; ?>" class="btn-editar">✏️
+Editar</a>
+
+<!-- Botón de eliminar (ya lo tenías) -->
+<a href="eliminar_producto.php?id=<?php echo $fila['id']; ?>" class="btn-eliminar"
+onclick="return confirm('¿Seguro?');">🗑️Eliminar</a>
 </td>
 </tr>
 <?php } // Fin del bucle while ?>
